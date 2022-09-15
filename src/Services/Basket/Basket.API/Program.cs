@@ -1,3 +1,4 @@
+using Basket.API.Repositories;
 using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +9,9 @@ var Configuration = builder.Configuration;
 builder.Services.AddControllers();
 builder.Services.AddRazorPages();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped<IBasketRepository, BasketRepository>();
+
 builder.Services.AddStackExchangeRedisCache(options =>
 {
     options.Configuration = Configuration.GetValue<string>("CacheSettings:ConnectionString");
@@ -32,6 +36,11 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
 
 app.MapRazorPages();
 
