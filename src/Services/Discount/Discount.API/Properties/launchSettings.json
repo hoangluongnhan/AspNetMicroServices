@@ -1,12 +1,4 @@
 {
-  "iisSettings": {
-    "windowsAuthentication": false,
-    "anonymousAuthentication": true,
-    "iisExpress": {
-      "applicationUrl": "http://localhost:60233",
-      "sslPort": 0
-    }
-  },
   "profiles": {
     "Discount.API": {
       "commandName": "Project",
@@ -15,7 +7,7 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "http://localhost:8002",
+      "applicationUrl": "http://localhost:4002",
       "dotnetRunMessages": true
     },
     "IIS Express": {
@@ -31,6 +23,14 @@
       "launchBrowser": true,
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
       "publishAllPorts": true
+    }
+  },
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:60233",
+      "sslPort": 0
     }
   }
 }

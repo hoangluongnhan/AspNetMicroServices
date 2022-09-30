@@ -1,12 +1,4 @@
 {
-  "iisSettings": {
-    "windowsAuthentication": false,
-    "anonymousAuthentication": true,
-    "iisExpress": {
-      "applicationUrl": "http://localhost:45627",
-      "sslPort": 0
-    }
-  },
   "profiles": {
     "Basket.API": {
       "commandName": "Project",
@@ -15,7 +7,7 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "http://localhost:8001",
+      "applicationUrl": "http://localhost:4001",
       "dotnetRunMessages": true
     },
     "IIS Express": {
@@ -31,6 +23,14 @@
       "launchBrowser": true,
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
       "publishAllPorts": true
+    }
+  },
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:45627",
+      "sslPort": 0
     }
   }
 }
